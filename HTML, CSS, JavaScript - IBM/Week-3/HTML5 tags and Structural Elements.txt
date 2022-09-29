@@ -1,0 +1,125 @@
+HTML5 Tags and elements
+
+Objectives
+ - List elements specific to HTML5
+ - Describe HTML5 structural elements
+    - Section, article, header, footer, figure, figcaption
+
+
+
+Specific HTML tags
+    <article>  - Content from and external source, news article, blog or forum 
+    <aside> - content aside from the page content  
+    <audio> - Embed sound content
+    <canvas> - Used to draw graphics
+    <datalist> - Provides a list of predefined opetions for input controls
+    <details> - Used to show or hide content
+    <embed> - Embeds an external application or interactive content into a page
+    <figcaption> - Caption for the figure tag
+    <figure> - Specifies self-contained content
+    <footer> - The footer of a document or section
+    <header> - Specifies a group of introductory or navigational elements
+    <keygen> - Specifies a key-pair generator field used in forms
+    <mark> - Represents highlighted text
+    <meter> - Used for measurements with minimum and maximum values
+    <nav> - Specifies navigation for a document
+    <output> - Represents the results of a calculation
+    <progress> - Specifies the state of work in progress
+    <section> - Defines sections in a document or article
+    <source> - Used to specify multiple media resources for media elements
+    <summary> - Defines a visible heading of the details tag
+    <time> - Used to specify the date or time in a document
+    <video> - Specifies a video, such as a movie clip or a video stream
+    <!-- --> - Comments in source that are not displayed in the browser
+
+
+
+HTML5 Structural elements
+ - HTML5 uses division based page layouts
+ - Separates areas in a document into divisions
+    - Use the <div> tag
+ - Provides flexibility control for applying a style to parts of a document
+ - Division-Based layouts help separate style from content
+ - The following elements can be used in place of the div and span elements to make a web page
+    - <article> 
+        . It represents an independent item of content that can logically stand alone
+        . Examples include a newspaper article, user comments, blog entries
+        . Can be used with the <time pubdate ...> attribute to provide a publication date for the article
+    - <section>
+        . Repersents a generic section of a document, for example: chapters of a book
+        . Typically accompanied with heading
+    - <header> 
+        . Defines the header information for a page
+        . Can be used for section table of contents or to wrap navigational links or logos
+    - <footer>
+        . Defines the text at the bottom of the page
+        . can be used for copyright information
+
+ Example of the use of atricle
+    
+     <!DOCTYPE html>
+    <head>
+        <title>
+            News
+        </title>
+    </head>
+
+    <body>
+        <article>
+            <header>
+                <h1>
+                    G8 summit protests
+                </h1>
+            </header>
+            <div>
+                <section id = "public">
+                    <h1>Public Demonstrations</h1>
+                    <p>...more...</p>  
+                </section>
+
+                <section id="control"> 
+                    <h1>Crowd Control </h1>
+                    <p>...more...</p>
+                </section>
+            </div>
+            <footer>
+                <p>
+                    Published <time datetime="2022-09-12">September 12, 2022</time>
+                </p>
+            </footer>
+        </article>
+    </body>
+
+
+
+Elements for Grouping Contents
+ - <aside>
+    - Defines a block of code that is displayed aside from the other content
+    - Content that is tnagentially related to the main discussion
+    - Can be used for cautions, notes or to wrap navigational links
+ - <figure>
+    - Defines a self contained element referred to form the main content
+    - Can be used to annotate graphics, photographs, code segments and so on
+    - Coule be moved to an appendix without affecting the flow of the document
+
+ - <figcaption>
+    - Defines the caption for the contents fo the figure element
+
+
+
+Navigational Elements
+ - <nav>
+    - An area where navigational links are placed into
+
+    Example 
+    <body>
+    <nav>
+        <div class = "menu">
+            <a href = "#"> Home </a> 
+            <a href = "about.html> About </a>
+            <a href = "register.html> Register </a>
+            <a href = "#"> Sign In </a> 
+        </div>
+    </nav>
+    <h1> Pages for you </h1>
+    </body> 

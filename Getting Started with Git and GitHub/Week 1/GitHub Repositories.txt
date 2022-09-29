@@ -1,0 +1,29 @@
+Objectives
+ . Be able to explain how to sign up for a GitHub Account
+ . Make a new Git Repo
+
+
+READ THE GITHUB GUIDE.
+
+Code
+    This is where all source files reside
+Issues
+    You can track and plan with tools such as "issues" that
+    lists all open items against your project base. 
+Pull Requests
+    This is the part of the mechanism for collaborating with
+    other users. They define changes that are committed 
+    and ready for review before being merged into the main
+    branch. 
+Projects
+    All the tools for managing, sorting, planning, etc. your
+    various projects. This is the core of the collaborative
+    power of GitHub. 
+Wiki, Security and Insights
+    This tools provide an communication base to the external
+    user community. 
+Settings
+    GitHub allows for a lot of personalization including
+    changing the name of your repo and controlling access.
+
+ 

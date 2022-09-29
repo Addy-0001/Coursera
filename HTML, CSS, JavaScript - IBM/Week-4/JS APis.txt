@@ -1,0 +1,153 @@
+Javascript APIs
+
+Objectives
+ - Explain how to work with nodes
+ - Describe how to modify the content of an element
+ - explain how to modify the inline style of an object
+ - Describe how to modify the attributes of an object
+ - Describe how to use window object methods and events
+
+Common APIs
+ - The remainder of this unit focuses on the common APIs used in JS application.
+ - Some of the common APIs used when accessing HTML DOM elements in webpages are seen on [common JS APIs.png]
+ 
+Retreiving a Reference to a Node
+ - To retrieve a node reference for an element of a document given an id, use the document.getElementById function and pass the id value as an argument. 
+    . This returns one specific HTML or XML element if a matching uinque id is found on the web page.
+    . The behavior is undefined if a webpage has two identical ids.
+    . The id attribute should be unique in the document.
+ - the getElementsByTagName function retrieves a NodeList of elements with a specified tag name. 
+    . The NodeListcontains an array of elements in your document.
+    . You provide the name of the element you are interested in and an array of all elements with that name found in the document is returned. 
+    . tagName is the name of the node.
+    . for HTML elements. the tagName is the literal name of the HTML tag.
+        Example: the <title> HTML tag has a tagName Value of "title" 
+    . If you run the function getElementsByTagName with a 'p' as a parameter argument, a NodeList of all the paragraphs in the document is returned. 
+
+Example: Retreiving all Images: 
+    var imgSet = document.getElementsByTagName("img"); 
+    var output = ""; 
+    for (var i = 0; i <imgSet.length; i++)
+    {
+        output += "<p> Source of Image "; 
+        output += i;
+        output += ": ";
+        output += imgSet[i].src;  
+        output += "<\/p>"; 
+    }
+    document.write(output);
+ - This example shows how you can retrieve all the image elements from a webpage by using the getElementsByTagName() function and passing "img" as the 
+   parameter argument. 
+ - The result is a NodeList that is assigned to the variable imgSet. 
+ - In the next part of the code, you loop through the NodeList and concatenate the results into a DOM output stream.
+ - The src attribute is a common property for the img tag. The src attribute indicats the location of the image source. 
+ - the document.write function adds the script-generated HTML to the document. 
+
+Adding New Nodes
+ - You can use the DOM API function document.createElement(TagName) to create an element in the current document. 
+    . Creates a new element with the namespace of the current document. 
+    . This is the preferred way of creating new HTML elements that are to be inserted into the document.
+    . After creating the element, you can use any number of functions to place the element in the appropriate location within the document.
+    . Use the insertBefore, appendChild, or replaceChild method to add the nwely created element into the document.
+ - parentNode.appendChild(node)
+    . Adds a node to the end of the list of children in the current element. 
+    . If the specified node is already part of the document, it is removed from the current parent and then added to the new parent node.
+
+Example: Adding a node
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <script>
+            function addPara() {
+                var newPara = document.createElement("p");
+                var newText = document.createTextNode("Hello World.");
+                newPara.appendChild(newText);
+                document.body.appendChild(newPara);
+            }
+            </script>
+        </head>
+
+        <body onload="addPara()"></body>
+        </html>
+ - This example shows a new paragraph element being created that includes a text node with the string "Hello world". 
+ - The text node is then appended as a child of the paragraph element. 
+ - Finally, the entire paragraph with text is appended as a child node at the end of the body node of the HTML page.
+
+Modifying and Element's Content
+ - element.innerHTML
+    . Retreives or sets the contents within an HTML element.
+    . The innerHTML property returns all child elements as a text string
+    . With this function, you can change the contents of an HTML element, by setting it to a text string that can include HTML tags
+    . Setting the innerHtml value of an element to a string removes all of the current child elements. 
+    . The browser then parses the string and sets the contents of the HTML element. 
+- Use document.createElement to create HTML elements
+        <div id = "div1">
+            <p>Hello</p>
+            <p> Hello</p>
+        </div>
+        <script>    
+            document.getElementByID("div1").innerHTML = '<p>Hello World!</p>';
+        </script>
+
+Modifying the inline style
+ - You can use the element.stype method to retreive ot set the inline CSS style for a particular element
+    . If you use element.style to set the style of an element, it overrides any setting from a CSS style sheer with one specific style. 
+    . CSS styles applied by a style sheet do not appear in the element.style property
+    . Using element.stype.styleName allows you to modify one specific CSS style
+ - Example: element.style.color - "red"; 
+    . The way to set the style in JS is with the afforementioned format. [element.style.propertyname = "value";]
+    
+        <div id = "div1" style = "color : blue">
+        </div> 
+        <script> 
+            var div1 = document.getElementById("div1");
+            div1.style.color = "red";
+        </script>
+    Here the div tag is used to group block-elements to format them with a color style. You can change the style of this div tag with the Javascript statement: 
+    div1.style.color = "red";
+ - In contrast, the element.setAttribute('style', ...) wipes out all previously set inline CSS 
+
+
+ Modifying Attributes
+ - The function, element.setAttribute with parameters (attrName, attrValue) dynamically modifies the attribute of an element. 
+    document,getElementByID("theImage").setAttribute("src", "another.gif");
+    . In this example, the src attribute of an element with an id of theImage is set to a different target image. 
+ - The function element.removeAttribute(attrName) removes an attribute from an element. 
+ - The function element.getAttribute(attrName) retrieves the value of the specified attribute in the element if it exists.
+    . Most web browsers return null if no attribute exists with the specifies name; however. the W3C DOM specification states that the method should 
+      return and empty string instead. 
+    . Use the hasAttribute method before calling getAttribute instead. 
+
+window Object Methods and Events
+ - To Open a nwe browser window, use the window,open() function. 
+    . window.open(url, name, [features, replace])
+    . Returns a reference to a new window object for the web browser
+    . You can use this reference later to close the window, with the reference_name followed followed by the close() function
+    .The parameters of the window.open function are: URL - A string that indicates the location of the web page to be displayed in the new window. 
+    . You can pass an empty string if you are going to write some script- generated content to the new window in the current URL context. 
+    . Name - A string that specifies the name of the window. Features - An optional string that specifies the features of the window, such as its placement and dimensions.
+    . The features string is a comma-separated list of name- value pairs. 
+    . Replace – An optional boolean value. If true, the new location replaces the current location in the browser history. 
+ - The window.onload function can be used to start a function after the page is loaded.
+    . An event handleer that executes a method when the page has finished rendering the document. 
+ - The window.dump("message") function writes a string into the console for the web browser.
+    . The dump function is a less intrusive way to display diagnostic information than the alert method.
+    . Writes a string into the console for the web browser 
+ - The window.scrollTo(x-value, y-value) scrolls the web browser to a particular set of coordinates on a page.
+
+Example: Using window.onload
+        <script>
+            onload = (function(){
+                addPara();
+            })();
+            function addPara()
+            {
+                 var nwePara = document.createElement("p");
+                 newPara.innerHTML = "hello world!";
+                 document.body.appendChild(newPara);
+            }
+        </script>
+
+ The onload event handler tuns in the curren window after the document loads the webpage. In the above example, the onload event causes an anonymus function to run. 
+ This function, in turn, tuns the fucntion addPara().
+ 

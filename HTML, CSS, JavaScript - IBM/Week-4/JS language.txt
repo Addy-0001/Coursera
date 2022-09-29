@@ -1,0 +1,84 @@
+Javascript Language: Overview and Syntax
+
+Objectives
+ - Describe JS primitives and objects
+
+The Nature Of Javascript
+ - Derived from the ECMAScript standard 
+ - Originally designed to run on Netscape Navigator
+ - Not realted to Java 
+    - Interpreted and compiled 
+ - Javascript interpreters embedded in web browsers
+    - Add dynamic behavior to otherwise static website
+ - Core feature of Asynchronous Javascript and XML (AJAX) 
+    - Works with HTML, CSS, XML and JSON
+
+Javascript Primitives
+ - Number 
+    . Integers (decimal, octal and hexadecimal)
+        -> 16 (decimal), 020 (octal), 0x10 (hexadecimal)
+    . Floating Point (Decimal followed by a decimal point and decimal digits and/or an exponent)
+        -> 3.1412, 5e2 
+    . NAN (not a number)
+    . Infinity
+ - string
+    . Enclosed by double quotes 
+ - boolean 
+    . True or false
+ - null
+    . Represented by null
+ - undefined
+    . A data type has not been assigned or the variable doesn't exist
+
+Wrapper Objects
+ - Some of the primitive datatypes have corresponding wrapper objects. 
+ - Allows an object of the related type to be created. 
+ - Stores the primitive value and offers methods with which to process it.
+ - Wrapper objects have the same name as primitive type, but they begin with a capital letter
+ - Primitive Type -> Wrapper Object
+    . boolean -> Boolean 
+    . number -> Number
+    . string -> String
+
+Examples with Wrapper Objects
+ - The keyword new is used to create instances of the wrapper objects.
+ - Javascript readily converts between wrapper objects and primitives
+ - Example
+    typeof "abc";                       //"string" (primitive)
+    typeof String("abc");               // "string"
+    typeof new String("abc");           // "object"
+    typeof (new String("abc")).valueof; //"string"
+
+Array Objects
+ - Contain methods and properties used to store data
+    . Accessible by indexed keys
+    . Use a zero-based indexing scheme 
+    . Grow or shrink dynamically by adding or removing elements
+    . Length property is the largest integer index in the array
+
+Declaring Array objects
+ - Arrays can be declared by using either an array constructor or an array literal
+ - When declaring an array using constructors, you use the new array keywords and specify the array elements as the parameters of new array. 
+ - Array literals are created by declaring the array elements within square brackets. 
+ - You then assign the array to a variable, as seen in the example here: 
+    . colors = ["red", "yellow", "green"];
+
+Date Object
+ - The date object is a specialized object that is used to hold the date and time 
+ - The constructor for a date object is in the format: new Date([with optional parameters])
+ - If you create  date object without any parameters, JS returns the object that contains the current local date and time
+ - If you send this date object to the console or try to display the date object on a web page, JS automatically applies a toString method to the object
+ - The result that is obtained is the string version of the date that is shown below: 
+    . Mon Sept 12 2022 08:12PM GMT+5:45 
+ - you can also create new dates by passing parameters to the new Date function
+
+Error Objects
+ - As with other OOPs, JS creates error objects with which an exception is thrown.
+ - The error onject instance include that contain information about the error:
+    . message: Contains the desctiption of the error
+    . name: Identifies the type of the error such as TypeError. RangeError or URIError 
+            A range error is created when the numeric value is outside of it's valid range.
+            There are a total of 6 such errors in JS. The above three and the other three are: EvalError, ReferenceError and SyntaxError
+ - The error object can be extended to create custom error types.
+ - The following line shows the creation of a generic error object with a custom error message in the parameter field
+        throw new Error("Only values 1-10 are permitted")

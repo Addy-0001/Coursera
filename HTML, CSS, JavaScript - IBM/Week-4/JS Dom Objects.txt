@@ -1,0 +1,47 @@
+Javascript DOM Objects
+
+Objectives
+ - Identify the DOM objects xommonly used in Javascript Applications for working with HTML doeuments
+
+DOM HTML-Related Node Types
+ - The W3C DOM level 2 defines 12 dfferent types of nodes, seven of which have direct applicability in HTML documents
+ - Node types that aren't applicable to HTML are omitted from the table.
+ - This table in important in the aspect that, when you view a DOM tree, you understand the meaning of numeric node types 
+ - Each node type is a named constant that is also represented by an integer value.
+ [see DOM HTML-Related Node Types.png for table]
+
+DOM level 2 Properties
+ - The table lists some of the DOM level 2 note object properties and corresponding data types.
+ - You see these properties when you view a DOM tree for an HTML page in a browser's developer tools like chrome's devtools
+ [See DOM level 2 properties.png for table]
+
+Accessing Document Elements
+ - How to access the elements on an HTML page with the DOM API?
+ - When the document is loaded, the browser creates arrays for forms, images, anchors, links, applets, and embeds. 
+ - Nested Objects are accessed using a dot notation. 
+ - To access the first image in a document, use: document.images[0]
+ - The arrays are indexed as they occur in the source document. The first index of each array starts at zero. 
+ - Each of the array types, such as forms[]. contains an array of elements[] with each index element being the fields or buttons that occur in that form. 
+ - You can either reference the elements by it's relative position as document.forms[0].elements[0] or you can do so by with named elements as 
+   document.forms["form1"].elements["field1"], or even the shortened document.form1.field1.
+ - Since only one document can be present in a window, you can leave out the window prefix. HOwever, you can't omit the doucment prefix from the referenced object.
+
+Object Naming
+ - To create script references to objects, you can assign a name to everday object in the HTML document. 
+ - Assign a scriptable reference name to an object with the id attribute.
+ - In order to assign a scriptable reference name to an HTML element with the ID attribute, use the following conventions: 
+    . The id must be a unique name in the document.
+    . The name must be in quotation marks. 
+    . The name must not start with a numeric digit.
+    . The function that is used t oreturn a node object that matches the id value is document.getElementById with the name of the id as a parameter argument. 
+        Example: 
+            <div id = "grid_container2:> 
+
+            var aDiv = document.getElementById("grid_container2")
+
+            if (aDiv)
+            {
+                //do something with the element;
+                ... 
+            }
+    . It is suggested that the same value be used for bothr the id and the name attribute when both are used. 

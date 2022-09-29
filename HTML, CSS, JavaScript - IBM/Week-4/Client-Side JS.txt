@@ -1,0 +1,66 @@
+Client Side JavaScript: with HTML
+
+Objectives
+ - Define client-side script
+ - Give Examples of when client-side script can be used
+ - Explain how to use the <noscript> tag
+ - Describe event bindings in script
+
+Scripts in HTML
+ - A client side script is a program that accompanies an HTML document or may be embedded directly in it
+ - The script program runs on the client device when the document loads or at some other time such as when a link is activated or when a button is clicked.
+ - HTML support for scripts is independent of the scripting language
+ - Scripts offer authors a means to modify and extend HTML documents in highly interactive and highly active ways
+    - Scripts can be run when an HTML document is loaded. 
+    - Scripts can be used to validate forms or to process input as it is typed.
+    - Scripts can be triggered by events that occur on a webpage, such as clicking of a button.
+    - Scripts can be used to dynamically create graphical and other document elements on an HTML page. 
+ - Following are two examples in which the <script> tag is used to include scripts in an HTML document. 
+            <script> 
+                //JS code (this method is good for short scripts)
+            </script> 
+
+            <script src = "/JS/script.js"></script> (This method is prefered when the script is long)
+        . The second example uses an src attribute to point to an external script file
+        . This method has several use cases such as importing JS libraries for complex interactions or using the same script across several HTML documents
+
+When Scripting is Not Available
+ - The <noscript> tag can be used to handle situations where scripts have been disabled ot a certain browser doesn't support them. 
+ - To allow these situations, place the content for the alternative path within the <noscript> tag. Like showin in the example below:
+        <script> 
+            //JS code to retrive data 
+        </script> 
+        <noscript> 
+            <p> Access the data from: </p> 
+            <a href = "somedata website">here</a> 
+        </noscript>
+
+Scripts Tied to intrinsic events
+ - Scripts can be run on detection of certain events that happen when the page is running in a browser session
+ - Scripts may be assigned to a number of elements through intrinsic event attributes: 
+        . onload = script 
+         - it occurs when the user agent finishes loading a window
+        . onclick = script
+         - it occurs when the pointing device button is clicked over an element
+        . onmouseover = script
+         - the even occurs when the pointing device is moved to an element
+        . onfocus = script
+         - The event occurs when an element recieves focus
+        . Onkeyup = script 
+         - The event occurs when a key is released. 
+        . onsubmit = script
+         - The event occurs when a form is submitted.
+        . onselect = script
+         - the event occurs when a user selects some texxt in a text field.
+
+Event binding in Scripts
+ - Following is an example of event binding in scripts where the inline event handler named showAnswers runs when the button is clicked
+        <button type = "button" onclick = "showAnswers()"> Show Solution
+            <script> 
+                function showAnswers()
+                {
+                    //code
+                    alret ("A")
+                } 
+            </script> 
+        </button> 

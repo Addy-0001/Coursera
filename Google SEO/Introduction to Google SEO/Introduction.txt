@@ -1,0 +1,40 @@
+Introduction 
+
+ . By understanding how search engines worked in the past, we can develop a better understanding of why we have certain practices in place today
+   and why some of the advancements to search engines have taken place
+ . Why we have the practices that are in place today. And what we need to know for the future. 
+
+Introduction to google SEO
+ . Objectives
+    - Describe SEO fundamentals
+    - Explain SEO as industry and career
+
+SEO stands for Search Engine Optimisation
+    . The practice of improving a website's visibility in search.
+    . SEO is a part of a larger digital marketing strategy and is a means of obtaining free organic traffic. 
+
+Other marketing ways associated with SEO
+    . Search Engine Marketing : Bididng for paid advertisement and search engines. 
+    . Social Media Marketing: Free and Paid ads and engagement.
+    . Content Marketing: Writing Content for blogs. newsletters etc. 
+    . Public Relations: Acquiring relationships and focusing on promoting news worthy content.
+
+White Hat SEO 
+    . Follows searching and best practices laid out by google and other search engines.
+    . Won't get penalised of banned  
+Black Hat SEO
+    . Goes beyond the grain and participate in what some might consider manipulative pracitces
+    . Tend to get hit by penalties more frequently.
+    . Known for more churn and burn approach to SEO
+Grey Hat SEO
+    . tend to be somewhere in the middle of white and black hat. 
+
+
+With SEO, the best way to learn is from practice and continual testing.
+
+Google has the largest market share of all search engines. 
+The goal is to get our or our client's website to show as high as possible for relevant keywords within these organic results. 
+It is important to know how clicks on a result and visits to a website are dramatically affected by the position of the result
+It is also important that the site is healthy and well optimised to not lose position or traffic
+The trick is to make sure you're optimising for the right keywords that are most likely to lead to an engaged visitor who converts. This will fall into keyword 
+psychology and research

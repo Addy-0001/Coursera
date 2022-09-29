@@ -1,0 +1,59 @@
+Introduction to GitHub
+
+Objectives
+ . Describe the purpose of source repositories
+ . Explain how GitHub satisfies the needs of a source
+   repositories
+
+Git Repository Model
+ . What is special about the git repo model? 
+    - Designed as a distributed version-control system.
+    - Primarily focused on tracking source code during
+      development. 
+    - Contains elements to coordinate among programmers,
+      track changes, and support non-linear workflows.
+
+What is git? 
+ . Git is a distributed version control system that is used
+   to track changes to content. 
+ . It serves as a central point for collaboration with a
+   particular focus on agile development methodologies.
+ . In a central version control system. every developer needs
+   to check out code from the central system and commit back
+   to it. 
+ . As git is a distributed version control, every developer
+   has a local copy of the full development history, and
+   changes are copied from one such repository to another. 
+   Each developer can act as a hub. 
+ . When git is used correctly, there is a main branch that
+   corresponds to the deployable code. 
+ . Teams can continuously integrate changes that are ready
+   to be released and can simultaneously work on separate
+   branches between releases. 
+ . Git can coexist locally, such as with the GitHub desktop
+   client or it can be used directly through a browser
+   connected to the GitHub web interface. 
+
+What is GitHub
+ . Github is an online hosting service for Git Repositories
+    - Hosted by a subsidiary of Microsoft
+    - Offers free, professionals and enterprise accounts
+ . What is a repository?
+    - A data structure for storing documents including 
+      application source code. 
+    - A repository can track and maintain version-control.
+
+What is GitLab?
+ . GitLab is:
+    - A DevOps platform. delivered as a single application
+    - Provides access to git repos
+    - Provides source code management
+
+ . GitLab enables Devs to: 
+    - Collaborate
+    - Work from a local copy
+    - Branch and merge code
+    - Streamline testing and delivery with CI/CD
+            *CI = Continuous Integtation
+            *CD = Continuous Delivery
+

@@ -1,0 +1,93 @@
+JavaScript : Variables and Control Statements
+
+Objectives
+ - Explain how variables are declared and used in JS
+ - Describe JS control structures
+
+A primer of Variables 
+ - Variables are declared on with the var keyword. Followed by a variable name.
+    eg: var age;
+        age = 96;
+ - Variables can be declared and initialized. Eg: var age = 54; 
+ - A variable value can be assigned at a later time. Similarly, it can be reassigned. 
+ - Since JS is a loosely typed language, the datatype of the variable doesn't need to be declared.
+ - the variable assumes the data type from the value of the field during the assignment and the type of the variable can change during program execution. 
+ - We have to beware of not initialising variables. the value of 'var age' - that has not been assigned a value isn't 0. 
+   or an empty string, or ant other useful default. It is "undefined". 
+ - The only keyword is a var and JS has no way of determining if this variable is a numeric or a string or anything else. Until you provide a value. 
+ - It threfore can't decide by default whether to assign a zero or an empty string. 
+ 
+ - Rules for variable identifiers:
+    . The name must start with a letter, $ or the _ signs. 
+    . Subsequent characters can also be digits [0-9].
+    . Identifiers are case-sensitive. 
+ - Scope of variables
+    . Variables declared within the function have local scope
+    . Variables declared outside of a function have a global scope.
+    . Variables with global scopes can be used elsewhere in the JS program.
+    . Variables declared without the var keyword have a global scope. 
+    . Variables that are not initialized have a value of Undefined. 
+    . Variables used inside one if statement can be used outside the scope of that condition. [Having no block statement scope]
+
+Compound Control Statements
+ var letter = "E" 
+ if (letter != "")
+ {
+    if (letter == "A")
+    {
+        //statements
+    }
+    else if (letter == "B")
+    {
+        //statements
+    }
+    if (letter == "C")
+    {
+        //statements
+    }
+    else 
+    {
+        //None of the above
+    }
+ else 
+ {
+    //letter is blank
+ }
+
+ - JS supports the switch statement instead of the if, then and else statements.
+ - Eg: 
+        switch (experiment)
+        {
+            case label1:
+            //statement
+            break; 
+            case label2: 
+            //statement
+            break;
+            ...
+            default:
+            //statements
+        }
+
+
+Repeat with For loops
+ - The for  loop repeats a series fo statements for any number of times
+ - It takes 3 values: The initial expression, the condition that's being tested, and the update expression. 
+ - Syntax:
+        for (initial expression; condition; update expression)
+        {
+            //statements that execure each time for the for() loop
+            // cycles as long as the condition is being satisfied.
+        }
+
+ - Incrementing the loop counter
+    -Example: 
+        for (var i = minVal; i < maxVal; i++)
+        {
+            //Statements tha execute as long as minval is less than maxval. 
+        }
+
+Repeat with While Loops 
+ - The while loop is another common loop in JS. It repeats while the condition remains true. 
+ - The while loop assumes that the condition reaches a conclusion and then exits the loop. 
+ - Make sure that the condition evaluates to false at some point. Otherwise, infinite loop. 

@@ -1,0 +1,134 @@
+Client Side JavaScript: With DOM
+
+Objectives
+ - Describe the document object model (DOM) hierarchy
+ - Describe the window and doeument objects
+ - Identify the DOM objects that are commonly used in JS applictions for working with HTML documents. 
+
+The DOM Programming Interface
+ - It is the programming interface between HTML or XHTML and
+   JavaScript. 
+ - It is a browser-based interface for applications and scripts to dynamically access and update the content, structure, and style of the documents. 
+ - JS uses the DOM to access and modify webpage elements in the web browser.
+ - 4 levels of DOM specifications by W3C
+    . Level 0 
+        - Refers to DOM objects that were in existence before the
+          DOM specifications were released.
+    . Level 1
+        - Describes the low level interface for structured docs and a 
+          specific version for the web -1998
+    . Level 2
+        - Includes a style sheet model and interfaces for manipulating
+          the style information attached to a document
+        - In addition, an event model is included. -2000
+    . Level 3
+        - Specifies content models and document validation
+        - Includes namespaces in XML, XML information set and XML schema. -2004
+    . Level 4
+        - Adds mutation observers as a replacement for mutation events. -2015.
+
+Implementation Standards
+ - Each browser has various levels of compatibility with the DOM standard.
+    . Not all DOM api calls are supported in every web browser implementation
+    . Some web browser implementations exhibit different behavior for the same DOM API call.
+    . The JS enginer in most web browsers fully supports level 1, the focus of this unit. 
+
+Basic DOM model for Browsers
+
+                     Window
+                       |
+    ------------------------------------------
+    |             |    |        |             |
+  History   Location   |    Navigator     Screen
+                       |
+                       |
+                    Document
+
+
+ - The window object is at the top of the DOM hierarchy and controls the environment that contains the document
+    -Window Object
+      . Top of the object hierarchy.
+      . When the browser loads a page, the window object is automatically created for you. 
+      . You can then access the window object properties and functions from your JS code. 
+      . Everything in the DOM takes place in a window.
+      . In client side JS, window object serves as the global object.
+      . A browser opens a window object on startup, even if the window is blank. 
+      . Can explicitly generate a new window with the window.open() method 
+      . Can omit the window prefix from object references, for ezample. document.write("text") instead of window.document.write("Text")
+      
+    - Window Object Dialog Boxes
+      . Plain alert Box: alert("message")
+      . Conformation OK/Cancel dialog: confirm("Message")
+      . Text-Entry Prompt: prompt("Message", "defaultreply")
+
+ - The history object keeps internal details about the recent history of the pages in the browser. It has methods for letting you simulate clicking back or forward
+   buttons in a browser.
+ - The location object contains information about the url of a page. 
+ - The nvigator is an object representation of the client internet browser or user agent. There is no standard that applies to the navigator object, 
+   so the property values returned when running queries on the navigator object are not consistent across browsers.  
+ - The screen object is used to derive information about a user's screen, such as the dimensions of the screen. It is useful for determining the screen size
+   of browser that run on mobile devices. 
+ - The document object provides access to all HTML elements within a page. Each HTML object that gets loaded into a window becomes a document object. 
+
+
+HTML Document Object Diagram
+ - The following shows the object model for a simple HTML document.
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta ...>
+        <title>Document</title>
+    </head>
+    <body>
+    
+    </body>
+    </html>
+ - The object hierarchy matches the HTML containment hierarchy on the left. The object diagram can also be represented as a tree structure that corresponds to the
+   structure of the HTML document as:
+
+                  Document
+                     |
+              ------------------
+             |                  |
+          DOCTYPE              HTML
+                                |
+                          -------------
+                         |            |
+                       HEAD          BODY
+                         |
+                  --------------
+                 |              |
+                META          TITLE
+
+ - The branches in the tree structure are termed as nodes. There are two types of nodes in the W3C DOM, element nodes and text nodes.
+ - All HTML tags are element nodes. The nodes that contain actual text that go between elements' start tag and end tag are known as text nodes.
+          <!DOCTYPE html>
+          <html>
+            <head> </head>
+            <body>
+              <form>
+                <p>
+                  <input
+                    type="button"
+                    onclick="checkpoint1()"
+                    value="run checkpoint question1">
+                </p>
+              </form>
+            </body>
+          </html>
+ - The line feeds between elements are text nodes and are a part of the DOM level 2 tree. 
+ - The Dom level 2 tree contains a line feed text node before the paragraph and input elements. 
+ - The input element contains all the text that follows the input
+ - DOM TREE looks like the following: 
+              Form
+               |
+            ---------
+           |         |
+        Textnode     p
+          "\n"       |
+              ---------------
+             |        |      |
+          Textnode  Input Textnode
+            "\n"            "\n"
+
+  

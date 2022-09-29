@@ -1,0 +1,78 @@
+HTML5 Input Element
+Attributes for the input tag
+
+Objective
+ - Describe the Attributes of the HTML5 Input element input type attributes tel, email, datetime, 
+   number, range, color
+
+Input for color choser
+ - The tag <input type = "color"/> allows the user to select color. The dialog that pops up varies
+   depending on the browser
+ - Some browsers don't support this input type. In such browsers, This input type is displayed as a
+   regular text input field into which the user might type a valid color name or color code.
+
+Input for date
+ - The tag <input type = "date"> is a date control attribute (year, month, day) without time zone
+ - The dialog that pops up varies depedning on the browse. 
+
+Input for Date and Time
+ - <input type = "datetime-local"/> provides input for a time. Year, month, day, hour, minute, AM/PM.
+   with no time zone.
+ - The time can be typed or entered using the spinner control.
+
+Input for Email
+ - <input type = "email"/> is displayed as a regular text field. 
+ - It only provides feedback when the input does not follow the email format.
+
+Input for Type Number
+ - <input type : "number"/> takes the numeric values as input 
+ - Optionally, specify the minimum and maximum values, step size etc. 
+
+Input of type Range
+ - <inpute type = "range">
+ - Can be used for a range of values.
+ - Only the slider itself is shown. Additional JS code is needed to display the value of the slider.
+
+Input of type Search 
+ - The differences between search and text are mostly is style
+ - <input type = "search"/> 
+ - Similar to the text field. 
+ - webkit based browsers return the most recent searches. 
+ - The search input feild on the safari browser has rounded corners
+
+Input of Phone Numbers
+ - <input type = "tel"> 
+ - Used for telephone numbers
+    - Syntax is <input type = "tel" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}">
+ - The code <input type = "tel"> doesn't inforce any numeric only input because other many numbers
+   have other signs such as plus sign and hypens.
+ - We need to supply owr own pattern matcher if we want the browser to validate the telephone number.
+
+Input for URLs
+ - <input type = "URL">
+ - Used for validating if the user input proper URL or not
+
+Input Attribute "List"
+ - <input list = "some list"> uses the <datalist> feature
+ - Used with <datalist> tag that includes the option list
+ - Not to be confused with the select element, the <datalist> options are only suggestions useful for autocomplete functionality.
+ - This option can be used by nesting the option element inside the datalist tag. 
+
+Input Attribute Placeholder
+ - Used to provide an example of the input format
+ - Does not actually send the placeholder text as input during form submission.
+ - Eg: <input type = "email" placeholder = "example@examplemail.com">
+ - Doesn't actually contain the text, it only contains example value in a lighter shade.
+ - Form doesn't submit the placeholder text if the input value isn't supplied by the user.
+
+Input Attribute "required"
+ - Indicates that the field is required.
+ - Eg: <input type = "email" required> 
+ - The requirement to type some input applies even if the field contains some placeholder text.
+
+Validation Fallback
+ - What if browser based validation is not supported for these input attributes? 
+    -There are various methods to performing validation tests to browsers that don't support all HTML5 input attributes.
+        . Prebuilt Libraries Like JS and jquery libraries
+        . Assume that more browsers will support these features over time and leave all final validation to server side
+        . Include custom JS validation by coding client side validation that is attached to the form submit event handler.

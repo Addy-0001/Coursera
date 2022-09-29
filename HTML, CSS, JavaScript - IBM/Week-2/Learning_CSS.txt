@@ -1,0 +1,128 @@
+CSS - Styling an HTML file
+
+Objectives:
+ - Explain what a Cascade Style Sheet is
+ - How to use CSS to format HTML elements
+ - How to use CSS in HTML docs to format webpages
+
+Media Independence with HTML and CSS 
+ - Give developers flexibility to targer web and mobile devices
+    - Android, iOS and tablets support HTML5
+    - Apple IOS doesn't support the same plug in technologies, like flash.
+
+ - NO requirement to download potenitally pre-compiled binary files
+
+ - They represent a media-independent description of interactive content
+    - to influence how a document is rendered on a screen, authors can use a styling language such as CSS 
+    - HTML tags can be read by screen readers to meet accessibility requirements
+
+What is CSS?
+ - Css is the design that is layered over the top of an HTML web page
+
+ - CSS describes how HTML elements are displayed.
+
+ - Developers apply CSS to create a uniform look throughout each element of each page of the website. 
+
+ - Child and descendant elements often inherit styles that are defined for parent elements. However, exceptions to the rules do exist.
+
+CSS design and Coding
+ - For websites, it is an important concept to separate the data from the design
+    - The data is sent to the browser by using HTML, and the design is applied to that data by using a CSS
+    - This sepatation allows the people to render a web page without your design if they have special accessibility needs
+    - It allows machines (such as search engines) to index a website without the design interfering
+
+ - You can code CSS as a style attribute in an HTML tag, a head section of a document or an external document. 
+    - The preference is to code CSS in external documents (referred to as style sheets)\
+
+What elements can CSS control
+ - you can use CSS to control a document's appearance and specify style rules for the following web page elements:
+    - Fonts 
+    - Text 
+    - Colors
+    - Backgrounds 
+    - Sizes
+    - Borders 
+    - spacing 
+    - Positioning
+    - Visual Effects 
+    - tables and 
+    - lists
+
+CSS Format 
+ html-tag-name
+ {
+    css-property-key-1 : css-value-1; 
+    css-property-key-2 : css-value-2;
+ }
+
+ The html-tag-name can be any one of the following elements:
+    - any of the tags that you find in HTML code
+        - <a>, <div>, <li>, or <label>, etc
+    - An ID reference that is displayed with a preceding hash symbol (#) in CSS code 
+        - #id-of-html-tag
+    - A class reference that is displayed with a preceding dot/period (.) symbol in CSS code
+        - .class-of-html-code
+
+Base Styles
+ When making a site design, begin by establishing the base style. Establish a base style by styling the body as shown below:
+    
+    body
+    {
+        background-color : #EEEEEE; //Makes the body color off white 
+        color: #000000; //Makes the text color black
+        margin : 0; //Ensures that all content edges match the edge of the browser window frame (margin and padding)
+        padding : 0; 
+        text-align: left; //Horizontally aligns the textual content to the left using text-align
+        font-size: 100%; //Sets the font size to the browser's default using font-size
+        font-family: sans-serif; //Uses a sans-serif (a font without the little flicks around the edges) as font family using using font-family.
+    }
+
+Guidelines for Base Styles 
+ - When a color is specifies, use Red-Green-Blue (RGB) hexadecimal light values
+ - When a size is specified, use pixels (indicated by a px after the number) and em, which is indicated by em after the number 
+   (that is the size multiplied by the number) or a percentage which is indicated by a % sign after the number
+ - Texts can be aligned left, right or center
+ - Floats can also be left or right
+ -Vertical alignments must be top, middle or Bottom
+ - Fonts can be any specific font or font family (serif, sans-serif, or monospace) or even a downloadable font
+
+Choosing a Layout
+ - One of the most important decisions that need to be taken while making a website is the choixe of a fluid or a fixed layout. 
+    - A fluid layout: 
+        - Elements are flexible and can expand or contract based on the browser, the OS and other user preferences
+        - These elements can be mostly specified by using percentages and ems
+    - A fixed layout: 
+        - We specify the height and width of the elements and it stays fixed regardless of which OS or browser we use
+        - These elements can be specified using pixels mostly
+ - While determining a layout, consider the pros and cons for the fluid and fixed layouts
+    - The type of website we chose depends on the type and amount of content and the target website. 
+
+Applying CSS to HTML
+ - To apply a CSS to an HTML file, we must tell the browser where to look for the CSS. This is the only true point where HTML references a CSS.
+ - We can make the reference in one of two ways, the <style> tag or the <link> tag.
+ - Using the Style Tag:
+    <style> 
+    //The CSS code goes here
+    </style>
+ - Using the Link Tag:
+    <link href = "/styles/style.css" rel = "stylesheet">
+
+            - Disadvantages of the Style tag 
+                - Can only be applied to one page
+                - Dirties the page with non HTML code 
+                - Copying and pasting this page increases the load time of each website
+
+            - Advantages of Link tag
+                - Ensures a clean HTML and a smaller page size
+                - To use this, the link tag must be added to the head tag section
+
+
+Summary:
+In this module, we learned the following:
+ - HTML provides the basic structure of and content for a website using tags. 
+ - The HTML dom tree describes how a website is structured. 
+ - HTML uses APIs to enhance the user experience when browsing websites.
+ - Scripting provides a more interactive user experience when browsing websites. 
+ - HTML5 Browser support tables describe which browsers support which HTML5 Features. 
+ - CSS provides a consistent style and design throughout the website.
+ 

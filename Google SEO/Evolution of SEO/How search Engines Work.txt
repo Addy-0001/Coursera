@@ -1,0 +1,12 @@
+Objectives
+. Learn all the parts that make up what we think of as a search engine
+. Identify the role of search tech like links, robots, and indexing.
+
+Robots
+ . Search engines have created programs called robots. 
+ . These robots are also called spiders or crawlers and each search enginer uses a robot unique to them. 
+ . They crawl the web in an effort to discover new web pages and documents. 
+ . One way robots discover new sites is through links.
+ . If another website links to your website, this creates an easy path to follow. 
+ . In the early days of the internet, webmasters had to submit their site to search engines so that it could be discovered by the robots. 
+ . Now, robots find your site on their own, adding your site to free services such as Google Webmaster Tools will aid in this discovery process. 

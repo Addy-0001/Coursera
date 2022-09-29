@@ -1,0 +1,73 @@
+Additional HTML elements: HTML fieldset and legend tag
+
+Special HTML elements
+
+Objectives:
+ - Use fieldset tag appropriately in HTML pages
+ - Use legend tag to decorate fieldset
+
+HTML fieldset tag
+ - The HTML fieldset tag is found within the form tag and is used to group related elements in an HTML form inside a box
+ - There is no restriction to the kind of elements that can be inside a fieldset but ther are mostly used to group related input type elements. 
+ - the elements can be grouped in a fieldset. This element can be specially useful in large forms where redability and ease of access can be improved with 
+   segmentation.
+
+ - Syntax
+    <fieldset>...content..</fieldset>
+
+ - Attribute
+    . Disabled: It specifies that the item belonging to the fieldset should be disabled. 
+    . Form: It specifies id of the form the fieldset is to be considered a part of.
+    . Name: It specifies the name for the fieldset.
+
+ - Example
+    <!DOCTYPE html>
+    <html>
+    <body>
+
+    <h1>The fieldset element</h1>
+
+    <form>
+        <fieldset form="user_regn" name="user_details"> 
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+    </body>
+    </html>
+
+HTML legend tag
+ - A fieldset can additionally have a title or a name that can be provided by legend. The <legend> tag is used with the <fieldset> element as a first child to define the
+   caption for the grouped related fields. This tag is also commonly referred to as the <fieldset> element. By using the legened tag with the fieldset elements, it is 
+   easy to understand the purpose of grouped form elements. 
+
+ - Example:
+        <!DOCTYPE html>
+        <html>
+        <body>
+
+            <h1>The fieldset element</h1>
+
+            <form>
+                <fieldset form="user_regn" name="user_details"> <legend>Personal Details:</legend>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday"><br><br>
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+        </body>
+        </html>
+

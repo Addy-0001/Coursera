@@ -1,0 +1,82 @@
+Javascript Functions and Prototypes
+
+Objectives 
+ - Describe functions in JS 
+ - Describe Prototypes in JS
+
+Functions
+ - A function is a block of code which can be called from any point after being declared
+ - The various parts of a function are:
+    . The keyword function
+    . The name of the function
+    . Patenthesis, with optional parameters
+    . Curly Braces with the logic
+ - The last statement in a function is the optional return statement that returns control back to whatever called the function.
+ - Example with dynamic typing and flexible parameters:
+        function add(n, m)
+        {
+            return n + m; 
+        }
+        var x = add(1, 2);          //Returns 3
+        x = add (1.25, 3.45);       //Returns 4.68
+        x = add("hello", "world");  //Returns "helloworld"
+ - You don't specify the datatype in the function parameter. The datatype are determined by the values of the arguments that are being passed to the funciton. 
+ - There is no specific return type declared, the funciton returns whatever type is passed to the function.
+ - In the above example, the return is a simple addition or concatenation of the input parameters. 
+ 
+Crearing Custom Objects
+ - The car function example: 
+        funciton car(make, model, year)
+        {
+            this.make = make;
+            this.model = model; 
+            this.year = year;
+            this.getname=function()
+            {
+                return this.make + " " + this.model + " " + this.year;
+            }
+        }
+
+        var c = new Car("meridian", "saber GT", 2012);
+        alert(c.getname); //Displays Meridian Saber GT 2012
+
+Prototypes
+ - By using prototypes, you can easily define properties and methods for all instances of a particular object.
+ - Object instances inherit the properties and methods defined by the object prototype.
+        . A prototype exists for all built-in JS objects that can be constructed with the new keyword. 
+ - Any object that gets instantiated inherits the current state of the prototype. 
+ - Scripts can add custom properties and methods to the prototype. 
+ - Scripts can override prototype properties and functions.
+        , These changes affect the current working instances without affecting the static object prototype.
+
+Adding functions to prototypes
+ - To add a new funciton to the template for the object, modify the prototype ofr the onject
+    . the same technique can be used to add or modify the object properties at runtime. 
+    . Changes to the Car.prototype object affects all instances of the car object. 
+            function Car(make, model, year)
+            {
+                this.make = make; 
+                this.model = model; 
+                this.year = year; 
+            }
+
+            Car.prototype.getName = Funciton()
+            {
+                return this.make + " " + this.model + " " + this.year;  
+            }
+    . This time you add a method function called getName to the car prototype. 
+    . when the car function is instantiated, it also includes the getName function that returns the make, model and year of the car. 
+    . All existing instances of the Car onject also inherit the getName method.
+
+Self Executing Functions 
+ - Functions are usually declared first and don't run unless we specifically ask them to.
+ - Self-Executing (auto-invocation) functions start running immediately after they have been declared.
+    - The functions and variables inside self executing funcitons are isolated from the rest of the script.
+    - A pattern for avoiding variable name conflicts in the namespace.
+ - Can be an anonymous (unnamed) function and have the following format:
+        (function ()
+        {
+            //Satatements; 
+        })();
+ - They are often used to initialize data or to declare DOM elements on the page. 
+ 

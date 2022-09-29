@@ -1,0 +1,104 @@
+Cloning and Forking GitHub Projects 
+Objectives
+ . Clone and sync repositories
+ . Fork a project to make a base for a new project
+ . Use git commands to communicate with other developers
+
+Cloning Generally refers to making a copy of the repository
+on your local machine. Cloned copies can be kept in sync
+between the two locations. 
+
+Forking allows you to modify or extend a project without
+affecting the original project. This is used to take an 
+existing project and make it the starting point for your 
+new project. 
+
+Cloning a GitHub Repository
+    - Navigate to the repository you want to clone
+    - Click Code
+    - In the clone with HTTPS secion, click clipboard to 
+      copy the URL. 
+    - Download source without the version control
+      by using the "Download Zip" button. 
+    - On the local machine, open a terminal window and
+      change to the directory where you want to clone the 
+      repo.
+    - Type 'git clone' followed by pasting the URL that you
+      copied above. And then press enter. 
+
+Syncing Local Changes
+    - To sync the code back to GitHub
+     . Run the git add <files> command
+     . Changed files move to staging area
+     . The staging area is the area where commits can be
+       formatted and reviewed before completing the commit. 
+     . Next, run 'git commit -m "message"' and this will 
+       commit the changes in the staging area. 
+    - To move the changes fully into the GitHub repo
+     . Use the git push command
+
+    
+Remote Repositories
+ . These are stored elsewhere. 
+ . Push, Pull, and fetch data to share work
+ . Origin refers to your fork
+ . Upstream refers to the original work. 
+ . Git push -> send the changes from your fork to the repo.
+ . Git fetch -> get the changes from repo to your fork. 
+ . git pull -> get the changes from repo to your fork and
+               and merge it as well.
+
+Forking a project
+ . Forking
+    - Takes a copy of a GitHub repo to use it as the base
+      for a new project.
+    - Can also use forking to submit back changes to the 
+      original repo. 
+ . Independently make changes to a project
+    - Submit a pull request to the original project owner.
+    - Owner decides whether or not to accept the changes
+ . It is often a legal requirement to keep a copy of the
+   license file. 
+    - Even if no legal requirement exists, it's good
+      practice. 
+
+Steps in forking a project
+ . Navigate to the repo that you want to fork. 
+ . In the top right corner, click the fork button. 
+
+Syncing a Fork of a Project
+ . To keep fork in sync with the original work:
+    - Create a local clone of the project
+    - configure Git to sync the fork as: 
+     . Open a terminal and change to the directory
+       containing the clone
+     . To access the remote repo, type git remove -v
+     . Type git remote add upstream <clone directory>
+     . To see the change, type git remote -v
+
+Commands for managing forks
+ . To grab upstream branches:
+    - git fetch upstream
+ . To merge the changes into the master branch
+    - git merge upstream/master
+
+
+When to fork or clone?
+By now you should be familiar with the difference between
+fork and clone. So let's summarize when you should clone 
+vs. fork. Typically if you have access to a project repo 
+e.g. as part of a team developing a codebase 
+collaboratively, you can clone the repo and synchronize 
+changes from your local copy of the repo using pull and 
+push.
+
+If however there is a public project that you want to 
+contribute to but do not have write access to, or use a
+public project as a starting point for your own project, 
+you can fork the project. Then work with the forked 
+codebase by cloning it to your machine and collaborating 
+with your development team working on the fork using the 
+pull-push synchronization with your fork of the project. 
+But if you want to contribute your changes back to the 
+upstream project (the original project that you forked 
+from), you can submit your changes using a pull request.
