@@ -1,0 +1,56 @@
+Objectives
+ . Understand common roles in a Git Project
+ . Use git commands to communicate with other developers.
+
+GitHub Developer
+Commands: 
+    - git clone
+        from the upstream to prime the local repo. 
+    - git pull and git fetch
+        from origin to keep up to date with the upstream
+    - git push
+        to shared repository, if you adopt CVS style shared
+        repository workflow
+    - git format patch
+        to prepare email submission. 
+    - git send email
+        to send your email submission without corruption
+        by your MUA
+    - git request pull
+        to create a summary of changes for your upstream to
+        pull. 
+
+Git Integrator:
+ . An Integrator
+    - Recieves changes made by others
+    - Reviews and responds to pull requests
+    - Publishes the result for others to use
+ . Integrators use the following commands
+    - git am
+      to apply patches emailed in from the contributors
+    - git pull 
+      to merge from your trusted lieutenants
+    - git format patch
+      to prepare and send suggested alternative to
+      to contributors
+    - git revert
+      to undo botched commits
+    - git push
+      to publish the bleeding edge. 
+
+GitHub Repository Administrator
+A repository admin sets up and maintains access to the repo
+by developers.
+ . git daemon
+   to allow anonymous download from repo
+ . git shell
+   used as a restricted login shell for shared central repo
+   users
+ . git http backend
+   provides a server side implementation of git over http 
+   allowing both fetch and push services. 
+ . gitweb 
+   provides a web front end to git repositories, which can
+   be set up using the git instaweb script. 
+Github Admins can use GitHub Actions to automate software 
+workflows including CI/CD. 
