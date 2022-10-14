@@ -1,0 +1,20 @@
+5 essential characteristics of Cloud Computing
+
+    1. On demand Self Service
+    2. Broad Network Access 
+    3. Resource Pooling
+    4. Rapid Elasticity
+    5. Mesaured Service
+
+Cloud Computing is a service
+
+3 Deployment Models of Cloud Computing
+    1. Public
+    2. Private
+    3. Hybrid
+
+3 service models of Cloud Computing
+    1. Infrastructure as a Service (IAAS) [Infrastructure]
+    2. Platform as a Service (PaaS) [Platform]
+    3. Software as a Service (SaaS) [Application]
+

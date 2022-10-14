@@ -1,0 +1,17 @@
+1950s - Large Scale mainframes became available. 
+1970s - VM was released. Mainframe could have multiple environments 
+        on the same hardware
+Virtulaization
+        - Catalyst for evolutions in computing.
+        - Servers were virtualized to:
+            . Shared Hosting Environments
+            . Virtual Private Servers
+            . Virtual Dedicated Servers
+Hypervisors
+        - Small software layer that allows multiple operating
+          systems run side by side by separating VMs logically. 
+        - Assigns each a slice of memory, computing power and 
+          prevents intereference between each other. 
+Cloud computing helps switch from CapEx model to OpEx model. 
+CapEx: High Up front costs
+OpEx: Low to no up front costs
