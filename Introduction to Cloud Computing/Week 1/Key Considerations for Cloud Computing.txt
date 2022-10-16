@@ -1,0 +1,8 @@
+Infrastucture and Workloads
+    The cost of building and operating data centers can become
+    astronomical
+
+    Low initial costs and pay-as-you-go attributes of cloud
+    computing can add up to a significant cost savings. 
+
+Software as a Service and Development Platforms
