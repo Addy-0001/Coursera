@@ -1,0 +1,22 @@
+- Cloud Adoption is no longer the thing of the future
+- The lag time from decision to value is no longer a decision
+  of years
+- Cloud Adoption makes it possible for businesses to experiment
+  fail and learn faster than ever before. 
+- This gives businesses a greater freedom to change course than
+  live with the consequences of expensive decisions taken in 
+  the past
+- According to IBM Institute for Business Value study, more 
+  than three quarters of enterprises today are using cloud 
+  computing to expand into new industries, 74% have adopted
+  cloud to improve customer experience, and 71% use cloud to
+  create enhanced products and services - while simultaneously
+  downsizing legacy systems and reducing costs.
+- Product life cycles have shortened and barriers to entry have
+  become lower. 
+- Cloud has become the enabler for AI, automation, IOT and 
+  blockchain. Also for new and legacy solutions and Open,
+  hybrid and secure infrastructures. 
+- International Data Corporation IDC predicts that the amount
+  of digiral data created worldwide will rise to 163 zettabytes.
+- A cloud strategy is the core component of any business today. 
