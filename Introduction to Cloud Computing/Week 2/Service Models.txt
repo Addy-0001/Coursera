@@ -1,0 +1,15 @@
+Overview of Cloud Service Models
+- 3 Service Models
+    - SaaS 
+        . It is just software that doesn't need to be installed
+          on our machine and doesn't have to be updated 
+          manually. 
+          Anyone can be a user of Software as a Service. 
+    - PaaS 
+        . Takes advantage from all the virtualization from IaaS
+          and subtracts them away so that the user doesn't have
+          to worry about managing those virtualized resources. 
+    - IaaS
+        . Set of computer networking and storage resources that
+          have been virtualized by a vendor so that a user can
+          access and configure them anyway they want. 
