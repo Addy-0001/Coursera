@@ -13,3 +13,43 @@ Overview of Cloud Service Models
         . Set of computer networking and storage resources that
           have been virtualized by a vendor so that a user can
           access and configure them anyway they want. 
+
+IaaS (Infrastructure as a Service)
+  - Form of cloud computing that delivers fundamental Compute, 
+    netwrok and storage resources to consumers on-demand, over 
+    the internet on a pay as you go basis. 
+  - The cloud provider hosts the data in a data center in an 
+    on premises data cernter as well as the virtualization or 
+    hypervisor layer. 
+  - Key Components of IaaS are: 
+    . Physical data centers
+    . Compute
+    . Network
+    . Storage
+  -Use Cases of IaaS
+    . Test and Development
+        Helping devs focus more on business logic than
+        Infrastructure management. 
+        Enable teams to set up test and development environments
+        faster.  
+    . Business Continuity and Disaster Recovery
+        This requires a significant amount of tech and staff
+        investments. 
+        IaaS is helping resolve this by allowing businesses to
+        Make applications and data accessile as usual during a 
+        disaster or outage. 
+    . Faster Deployment and Scaling
+        To deploy applications faster. 
+        Scale infrastructure up and down as demand fluctuates.
+    . High Performance Computing
+        To solve complex problems involving millions of
+        variables. 
+    . Big Data Analysis
+        Mining massive data sets to locate valuable patterns, 
+        trends and associations requires a huge amount of
+        processing power. 
+        Cloud Computing provides the required high performance
+        computing and also makes it economically viable. 
+  - Concerns
+    . Lack of Transperancy
+    . Dependency on a Third Party       
